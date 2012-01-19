@@ -4,8 +4,9 @@
 (defvar my-config-dir (concat my-init-dir "config/")
   "The directory under which configuration for various packages resides.")
 
-(setq custom-file (concat my-config-dir "custom.el"))
+(load (setq custom-file (concat my-config-dir "custom.el")))
 
 (add-to-list 'load-path my-config-dir)
-
-(require 'my-package-config)
+(mapc (lambda (filename)
+	(require (intern (file-name-sans-extension filename))))
+      (directory-files my-config-dir nil "^my-.*\\.el$"))
