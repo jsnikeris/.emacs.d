@@ -1,4 +1,4 @@
-(setq org-agenda-files '("~/Documents/things.org"))
+(setq org-agenda-files '("/abelson.snikeris.com:Documents/things.org"))
 (setq org-fast-tag-selection-single-key 'expert)
 (setq org-tag-alist
       '(("@read" . 114) ("@phone" . 102) ("@computer" . 99) ("@internet" . 105)
