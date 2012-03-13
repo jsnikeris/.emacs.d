@@ -1,3 +1,4 @@
+(require 'my-socks)
 (require 'package)
 
 (defun my-package-install-package (package)
