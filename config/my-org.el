@@ -1,4 +1,7 @@
 (setq org-agenda-files '("/abelson:Documents/things.org"))
+(setq org-agenda-dim-blocked-tasks 'invisible)
+(setq org-agenda-start-on-weekday nil)
+
 (setq org-fast-tag-selection-single-key 'expert)
 (setq org-tag-alist
       '(("@read" . 114) ("@phone" . 102) ("@computer" . 99) ("@internet" . 105)
@@ -7,7 +10,6 @@
 (setq org-todo-keywords
       '((sequence "TODO(t)" "WAITING(w)" "|" "DONE(d)" "CANCELED(c)")))
 (setq org-enforce-todo-dependencies t)
-(setq org-agenda-dim-blocked-tasks 'invisible)
 
 (require 'org)
 
