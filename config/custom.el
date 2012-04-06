@@ -7,6 +7,7 @@
  '(indent-tabs-mode nil)
  '(iswitchb-mode t)
  '(menu-bar-mode nil)
+ '(require-final-newline t)
  '(tool-bar-mode nil)
  '(visible-bell t))
 (custom-set-faces
