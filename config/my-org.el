@@ -1,4 +1,4 @@
-(setq org-agenda-files '("/abelson:Documents/things.org"))
+(setq org-agenda-files '("/abelson:doc/things.org"))
 (setq org-agenda-dim-blocked-tasks 'invisible)
 (setq org-agenda-start-on-weekday nil)
 
