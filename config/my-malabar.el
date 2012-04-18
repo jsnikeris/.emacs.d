@@ -1,3 +1,5 @@
+(require 'my-cedet)
+
 (defvar my-malabar-dir (expand-file-name "~/src/malabar-mode"))
 
 (when (file-directory-p (expand-file-name "target" my-malabar-dir))
