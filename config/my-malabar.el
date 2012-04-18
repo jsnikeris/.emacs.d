@@ -1,6 +1,6 @@
 (defvar my-malabar-dir (expand-file-name "~/src/malabar-mode"))
 
-(when (file-directory-p my-malabar-dir)
+(when (file-directory-p (expand-file-name "target" my-malabar-dir))
   (setq malabar-groovy-lib-dir (expand-file-name "target/lib" my-malabar-dir))
   (setq malabar-groovy-extra-classpath
         (expand-file-name "target/classes" my-malabar-dir))
