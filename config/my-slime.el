@@ -1,0 +1,10 @@
+(defun slime ()
+  (interactive)
+  (fmakunbound 'slime)
+  (load (expand-file-name "~/.quicklisp/slime-helper.el"))
+  (set-language-environment "UTF-8")
+  (setq slime-net-coding-system 'utf-8-unix)
+  (setq inferior-lisp-program "/usr/bin/sbcl")
+  (slime))
+
+(provide 'my-slime)
