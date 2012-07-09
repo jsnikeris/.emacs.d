@@ -8,6 +8,9 @@
   "Contains elisp files developed by others.
 Does not include packages managed by package.el.")
 
+(defvar my-info-dir (expand-file-name "info" my-init-dir)
+  "Contains '.info' files to be merged with those provided by the system.")
+
 (load (setq custom-file (expand-file-name "custom.el" my-config-dir)))
 
 (mapc (lambda (dir) (add-to-list 'load-path dir))
