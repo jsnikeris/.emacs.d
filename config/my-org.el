@@ -2,7 +2,6 @@
 
 (my-package-install-package 'org)
 
-(setq org-agenda-files '("/abelson:doc/things.org"))
 (setq org-agenda-dim-blocked-tasks 'invisible)
 (setq org-agenda-start-on-weekday nil)
 
