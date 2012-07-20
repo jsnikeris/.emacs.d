@@ -9,6 +9,7 @@
  '(iswitchb-mode t)
  '(menu-bar-mode nil)
  '(require-final-newline t)
+ '(safe-local-variable-values (quote ((lexical-binding . t))))
  '(scroll-bar-mode nil)
  '(tool-bar-mode nil)
  '(visible-bell t)
