@@ -10,4 +10,6 @@
      (define-key paredit-mode-map (kbd "M-[") 'paredit-wrap-square)
      (define-key paredit-mode-map (kbd "M-{") 'paredit-wrap-curly)))
 
+(add-hook 'clojure-mode-hook 'paredit-mode)
+
 (provide 'my-paredit)
