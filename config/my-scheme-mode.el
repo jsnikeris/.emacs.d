@@ -1,6 +1,3 @@
-(require 'my-package)
-
-(my-package-install-package 'quack)
-(require 'quack)
+(my-require 'quack)
 
 (provide 'my-scheme-mode)

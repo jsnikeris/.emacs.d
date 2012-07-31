@@ -1,4 +1,4 @@
-(require 'lisp-mode)
+(my-require 'lisp-mode)
 
 (defun my-find-thing-at-point ()
   (interactive)

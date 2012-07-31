@@ -16,6 +16,8 @@ Does not include packages managed by package.el.")
 (mapc (lambda (dir) (add-to-list 'load-path dir))
       (list my-config-dir my-site-lisp-dir))
 
+(require 'my-package)
+
 (mapc (lambda (filename)
 	(require (intern (file-name-sans-extension filename))))
       (directory-files my-config-dir nil "^my-.*\\.el$"))

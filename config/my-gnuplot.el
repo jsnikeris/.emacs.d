@@ -1,5 +1,3 @@
-(require 'my-package)
-
-(my-package-install-package 'gnuplot)
+(my-require 'gnuplot)
 
 (provide 'my-gnuplot)

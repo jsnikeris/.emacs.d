@@ -1,4 +1,4 @@
-(require 'my-url)
+(my-require 'my-url)
 
 (unless (require 'ert nil t)
   (dolist (filename '("ert.el" "ert-x.el" "ert-tests.el" "ert-x-tests.el"))

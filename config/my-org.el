@@ -1,6 +1,4 @@
-(require 'my-package)
-
-(my-package-install-package 'org)
+(my-require 'org)
 
 (setq org-agenda-dim-blocked-tasks 'invisible)
 (setq org-agenda-start-on-weekday nil)
@@ -13,8 +11,6 @@
 (setq org-todo-keywords
       '((sequence "TODO(t)" "WAITING(w)" "|" "DONE(d)" "CANCELED(c)")))
 (setq org-enforce-todo-dependencies t)
-
-(require 'org)
 
 (defun my-org-insert-sub-task ()
   (interactive)

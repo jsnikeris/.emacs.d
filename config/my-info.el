@@ -1,4 +1,4 @@
-(require 'info)
+(my-require 'info)
 
 (defun my-info-install (info-file)
   "Adds an entry for INFO-FILE in the 'dir' file under `my-info-dir'."

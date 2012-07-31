@@ -1,4 +1,4 @@
-(require 'dired-x)
+(my-require 'dired-x)
 
 (setq-default dired-omit-mode t)
 (setq dired-omit-files

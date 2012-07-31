@@ -1,4 +1,4 @@
-(require 'whitespace)
+(my-require 'whitespace)
 
 (setq whitespace-style '(face trailing tabs lines-tail))
 (setq whitespace-global-modes '())

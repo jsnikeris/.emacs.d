@@ -1,5 +1,3 @@
-(require 'my-package)
-
-(my-package-install-package 'magit)
+(my-require 'magit)
 
 (provide 'my-magit)
