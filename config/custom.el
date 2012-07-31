@@ -5,7 +5,6 @@
   ;; If there is more than one, they won't work right.
  '(column-number-mode t)
  '(indent-tabs-mode nil)
- '(initial-buffer-choice "~/")
  '(iswitchb-mode t)
  '(menu-bar-mode nil)
  '(require-final-newline t)
