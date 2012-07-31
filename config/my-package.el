@@ -7,10 +7,11 @@
    (expand-file-name "package.el" my-site-lisp-dir))
   (require 'package))
 
-(package-initialize)
-
 (defvar my-src-dir (expand-file-name "~/src")
   "Contains source for projects that can be my-required")
+
+(add-to-list 'package-archives
+	     '("marmalade" . "http://marmalade-repo.org/packages/") t)
 
 (defun my-require (feature)
   (unless (require feature nil t)
@@ -22,7 +23,7 @@
        ((not (package-installed-p feature))
         (package-install feature))))))
 
-(add-to-list 'package-archives
-	     '("marmalade" . "http://marmalade-repo.org/packages/") t)
+(package-refresh-contents)
+(package-initialize)
 
 (provide 'my-package)
