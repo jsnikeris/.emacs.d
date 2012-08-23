@@ -8,6 +8,7 @@
 
 (define-key emacs-lisp-mode-map (kbd "M-.") 'my-find-thing-at-point)
 
+(add-hook 'emacs-lisp-mode-hook 'paredit-mode)
 (add-hook 'emacs-lisp-mode-hook 'rainbow-delimiters-mode)
 
 (provide 'my-emacs-lisp)
