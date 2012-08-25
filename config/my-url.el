@@ -1,4 +1,4 @@
-(my-require 'url)
+(require 'url)
 
 (defun my-url-write-content (url filename)
   "Write the content of URL into file FILENAME."
