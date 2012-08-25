@@ -1,4 +1,5 @@
 (my-require 'lisp-mode)
+(my-require 'my-rainbow-delimiters)
 
 (defun my-find-thing-at-point ()
   (interactive)
