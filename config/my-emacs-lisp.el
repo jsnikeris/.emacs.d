@@ -1,5 +1,6 @@
 (my-require 'lisp-mode)
 (my-require 'my-rainbow-delimiters)
+(my-require 'my-whitespace)
 
 (defun my-find-thing-at-point ()
   (interactive)
@@ -11,5 +12,7 @@
 
 (add-hook 'emacs-lisp-mode-hook 'paredit-mode)
 (add-hook 'emacs-lisp-mode-hook 'rainbow-delimiters-mode)
+
+(add-to-list 'whitespace-global-modes 'emacs-lisp-mode)
 
 (provide 'my-emacs-lisp)
