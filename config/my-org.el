@@ -1,9 +1,10 @@
-(my-require 'org)
+(my-package-install 'org)
+(require 'org)
 
 (defun my-org-insert-sub-task ()
   (interactive)
   (let ((parent-deadline (org-get-deadline-time nil))
-	(parent-scheduled (org-get-scheduled-time nil)))
+        (parent-scheduled (org-get-scheduled-time nil)))
     (org-goto-sibling)
     (org-insert-todo-subheading t)
     (when parent-deadline
@@ -22,9 +23,9 @@
 (add-hook 'org-clock-out-hook 'my-remove-empty-drawer-on-clock-out 'append)
 
 ;;; Files
-(setq org-directory (expand-file-name "~/doc"))
+(setq org-directory (expand-file-name "~/Documents"))
 (setq org-agenda-files
-      (list org-directory (expand-file-name "comcast" org-directory)))
+      (list org-directory (expand-file-name "Comcast" org-directory)))
 (setq org-default-notes-file (expand-file-name "refile.org" org-directory))
 (add-to-list 'auto-mode-alist '("\\.\\(org\\|org_archive\\|txt\\)$" . org-mode))
 
@@ -66,7 +67,7 @@
 (setq org-fast-tag-selection-single-key 'expert)
 (setq org-tag-alist
       '(("@read" . 114) ("@phone" . 102) ("@computer" . 99) ("@internet" . 105)
-	("@work" . 119) ("@errand" . 101) ("@home" . 104)))
+        ("@work" . 119) ("@errand" . 101) ("@home" . 104)))
 (setq org-use-tag-inheritance nil)
 
 ;;; Keybindings

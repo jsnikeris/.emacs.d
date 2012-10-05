@@ -10,18 +10,21 @@
 (defvar my-src-dir (expand-file-name "~/src")
   "Contains source for projects that can be my-required")
 
-(add-to-list 'package-archives
-	     '("marmalade" . "http://marmalade-repo.org/packages/") t)
+(mapc (lambda (p) (add-to-list 'package-archives p t))
+      '(("marmalade" . "http://marmalade-repo.org/packages/")
+        ("org" . "http://orgmode.org/elpa/")))
+
+(defun my-package-install (name)
+  (unless (package-installed-p name)
+    (package-install name)))
 
 (defun my-require (feature)
   (unless (require feature nil t)
     (let ((src-dir (expand-file-name (symbol-name feature) my-src-dir)))
-      (cond
-       ((file-readable-p src-dir)
+      (if (not (file-readable-p src-dir))
+          (my-package-install feature)
         (add-to-list 'load-path src-dir)
-        (require feature))
-       ((not (package-installed-p feature))
-        (package-install feature))))))
+        (require feature)))))
 
 (package-refresh-contents)
 (package-initialize)
