@@ -1,5 +1,8 @@
 (my-require 'jabber)
 (my-require 'my-password-cache)         ;password in ~/.secrets.el.gpg
+(my-require 'my-info)
+
+(my-info-install-link (expand-file-name "jabber.info" (my-package-dir 'jabber)))
 
 (setq
  jabber-account-list '(("snikeris@gmail.com"
