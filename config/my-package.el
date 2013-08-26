@@ -26,6 +26,12 @@
         (add-to-list 'load-path src-dir)
         (require feature)))))
 
+(defun my-package-dir (package)
+  (let ((pkg-desc (cdr (assq package package-alist))))
+    (when pkg-desc
+      (package--dir (symbol-name package)
+                    (package-version-join (package-desc-vers pkg-desc))))))
+
 (package-refresh-contents)
 (package-initialize)
 
